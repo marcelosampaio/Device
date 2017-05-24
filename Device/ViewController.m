@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import <GBDeviceInfo.h>
+
+
 
 @interface ViewController ()
 
@@ -14,16 +17,16 @@
 
 @implementation ViewController
 
+#pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    GBDeviceInfo *deviceInfo = [GBDeviceInfo deviceInfo];
+    NSLog(@"--- deviceInfo model: %ld",(long)deviceInfo.family);
+    
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
